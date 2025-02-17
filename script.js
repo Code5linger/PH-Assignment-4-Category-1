@@ -88,5 +88,22 @@ function isBestFriend(f1, f2) {
   return f1.bestFriend === f2.roll && f2.bestFriend === f1.roll;
 }
 
+// Problem-05: Let’s Calculate Video watch Time
+function calculateWatchTime(times) {
+  if (!Array.isArray(times)) {
+    return 'Invalid';
+  }
 
-// ফাংশন কল বা console.log করার প্রয়োজন নেই কারণ এটি সাবমিটের আগে রিমুভ করতে হবে।
+  if (!times.every((time) => typeof time === 'number')) {
+    return 'Invalid';
+  }
+
+  let totalSeconds = times.reduce((sum, time) => sum + time, 0);
+
+  let hour = Math.floor(totalSeconds / 3600);
+  totalSeconds %= 3600;
+  let minute = Math.floor(totalSeconds / 60);
+  let second = totalSeconds % 60;
+
+  return { hour, minute, second };
+}
