@@ -1,13 +1,9 @@
-// Problem-01 : Calculate the cash-out Charge
 function cashOut(money) {
   if (typeof money !== 'number' || money < 0) {
-    // Insted of creating another if block I used Ternary Operator "||, &&"
     return 'Invalid';
   }
   return (money * 1.75) / 100;
 }
-
-// Problem-02 : Detect email  valid or not
 
 function validEmail(email) {
   if (typeof email !== 'string') {
@@ -34,7 +30,6 @@ function validEmail(email) {
   return true;
 }
 
-// Problem-03 : Who will Win  ( 🥭Mango /🍌 Banana )
 function electionResult(votes) {
   if (!Array.isArray(votes)) {
     return 'Invalid';
@@ -63,7 +58,7 @@ function electionResult(votes) {
   }
 }
 
-// Problem-04: Detect The Perfect Best Friend
+
 function isBestFriend(f1, f2) {
   if (
     typeof f1 !== 'object' ||
@@ -88,7 +83,6 @@ function isBestFriend(f1, f2) {
   return f1.bestFriend === f2.roll && f2.bestFriend === f1.roll;
 }
 
-// Problem-05: Let’s Calculate Video watch Time
 function calculateWatchTime(times) {
   if (!Array.isArray(times)) {
     return 'Invalid';
